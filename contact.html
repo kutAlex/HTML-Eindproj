@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h4>Alexander Baum</h3>
+            </div>
+            <img src="img/Alex.jpg" style="max-width:100%; padding:10%;" class="rounded-circle" alt="Cinque Terre">
+            <ul class="list-unstyled components">
+              <h2 style="padding: 10px;">Menu</h2>
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li>
+                    <a href="media.html">Media</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle  Menu</span>
+                    </button>
+                </div>
+            </nav>
+
+            <h2>Wie ben ik</h2>
+            <p>Ik ben Alexander Baum en ben student op het ROC-Nijmegen, Technovium. Ik studeer Software Development en zit momenteel in het eerste jaar. Ik ben 19 jaar oud en woon al sinds ik mij kan herrineren in Venlo maar sinds kort in Nijmegen!. Mijn vader is Duits en mijn moeder half Italiaans en half Nederlands. Ik ben zelf ook geboren in Willich, een klein dorpje in Duitsland wat in de buurt ligt van Mönchengladbach. Ik heb mijn VMBO-T diploma gehaald op het Blariacum College te Blerick.</p>
+
+            <div class="line"></div>
+
+            <h2>Toekomst</h2>
+            <p>Later zou ik graag willen werken als Medisch Software Engineer omdat ik een steentje bij wil dragen aan het welzijn van de mensheid over heel de wereld. Ik denk dat de ICT sector later net zo belangrijk is als de zorgsector (als je kijkt na wat je voor mensen medisch kan betekenen).</p>
+            <p>Dit zal natuurlijk niet zonder slag of stoot gaan en zal nog vele jaren als student betekenen. Na het ROC zou ik graag na de Universiteit willen door middel van een 21+ toets. Hier hebben ze meerdere opleidingen die mij persoonlijk aanspreken en waar ik een goed gevoel bij zou hebben.</p>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
